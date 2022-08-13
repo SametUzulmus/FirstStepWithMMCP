@@ -1,0 +1,28 @@
+{% extends "Layout.html" %}
+
+
+
+
+{% block content %}
+    
+
+            
+{% if book %}
+                
+    {% for i in book %}
+        
+        <a href="">{{i.name}}</a>
+        <br>
+                    
+    {% endfor %}
+{% else %}
+                
+{% endif %}
+            
+
+            
+         
+            
+        
+
+{% endblock %}

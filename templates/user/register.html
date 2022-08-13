@@ -1,0 +1,72 @@
+{% extends "Layout.html" %}
+
+{% block content %}
+    
+    
+    <form action="{% url 'register' %}" method="POST">
+        {% csrf_token %} 
+        <div class="clearfix mt-4">
+
+            <div class="w-50 float-left">
+
+                <div class="form-group">
+
+                    <label for="first_name">Adınız</label>
+                    <input type="text" name="first_name" class="form-control" placeholder="Ad" required>
+                
+                </div>
+
+            </div>
+
+            <div class="w-50 float-left pl-2">
+
+                <div class="form-group">
+
+                    <label for="last_name">Soyadınız</label>
+                    <input type="text" name="last_name" class="form-control" placeholder="Soyad" required>
+                
+                </div>
+
+
+            </div>
+
+        </div>
+
+        
+        
+        <div class="form-group">
+
+            <label for="username">Kullanıcı Adı</label>
+            <input type="text" name="username" class="form-control" placeholder="Kullanıcı Adı" required>
+        
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="email">Email</label>
+            <input type="email" name="email" class="form-control" placeholder="Email" required>
+            
+        </div>
+
+        <div class="form-group">
+
+            <label for="password">Şifre</label>
+            <input type="password" name="password" class="form-control" placeholder="Şifre" required>
+        
+        </div>
+        
+        <div class="form-group">
+
+            <label for="repassword">Şifre Tekrar</label>
+            <input type="password" name="repassword" class="form-control" placeholder="Şifre" required>
+        
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Kayıt Ol</button>
+
+    </form>
+
+
+    
+{% endblock %}
